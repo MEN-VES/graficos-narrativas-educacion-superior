@@ -1,6 +1,194 @@
-<h1>Gráficos Narrativas Educación Superior</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gráficos Narrativas Educación Superior</title>
 
-<ul>
-  <li><a href="tcb-nacional.html">TCB Nacional</a></li>
-  <li><a href="tti-nacional.html">TTI Nacional</a></li>
-</ul>
+  <style>
+    :root {
+      --morado: #5f2879;
+      --magenta: #93278f;
+      --rosa: #fc00ad;
+      --gris-oscuro: #333333;
+      --gris: #666666;
+      --fondo: #f7f7f7;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--gris-oscuro);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--morado), var(--magenta), var(--rosa));
+      color: white;
+      padding: 56px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 800;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 16px auto 0;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: -32px auto 60px;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      border-left: 6px solid var(--rosa);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .grafico {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid #e6e6e6;
+      transition: all 0.2s ease;
+    }
+
+    .grafico:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border-color: var(--magenta);
+    }
+
+    .grafico h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: var(--morado);
+    }
+
+    .grafico p {
+      color: var(--gris);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+
+    .boton {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--morado);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .boton:hover {
+      background: var(--rosa);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: rgba(147,39,143,0.10);
+      color: var(--magenta);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Narrativas de Educación Superior</h1>
+    <p>
+      Visualizaciones interactivas para acompañar el análisis, la divulgación
+      y la lectura territorial de los avances de la educación superior en Colombia.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="card intro">
+      <span class="etiqueta">Ministerio de Educación Nacional</span>
+      <h2>Gráficos interactivos</h2>
+      <p>
+        Este espacio reúne visualizaciones desarrolladas para ser consultadas
+        directamente o integradas en narrativas digitales, StoryMaps y otros
+        productos de gestión de conocimiento.
+      </p>
+    </section>
+
+    <section class="grid">
+
+      <article class="grafico">
+        <h2>TCB Nacional</h2>
+        <p>
+          Evolución de la Tasa de Cobertura Bruta en educación superior.
+        </p>
+        <a class="boton" href="tcb-nacional.html">Ver gráfico</a>
+      </article>
+
+      <article class="grafico">
+        <h2>TTI Nacional</h2>
+        <p>
+          Evolución de la Tasa de Tránsito Inmediato a la educación superior.
+        </p>
+        <a class="boton" href="tti-nacional.html">Ver gráfico</a>
+      </article>
+
+      <article class="grafico">
+        <h2>TCB Departamental</h2>
+        <p>
+          Comparativo territorial de cobertura por departamento.
+        </p>
+        <a class="boton" href="tcb-departamental.html">Ver gráfico</a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Fuente: SNIES · Ministerio de Educación Nacional · Colombia
+  </footer>
+
+</body>
+</html>
